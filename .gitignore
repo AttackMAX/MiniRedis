@@ -1,0 +1,23 @@
+# Build
+/build/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# binaries
+*.o
+*.obj
+*.exe
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# logs
+*.log
