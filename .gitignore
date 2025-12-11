@@ -3,6 +3,7 @@
 
 # macOS
 .DS_Store
+*.dSYM
 
 # IDE
 .vscode/

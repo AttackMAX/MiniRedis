@@ -104,7 +104,13 @@ static int32_t one_request(int connfd) {
     return write_all(connfd, wbuf, 4 + len);
 }
 
-
+// 设置非阻塞状态
+static void fd_set_nonblock(int fd) {
+    int flags = fcntl(fd, F_GETFL, 0);  // get the flags
+    flags |= O_NONBLOCK;                // modify the flags
+    fcntl(fd, F_SETFL, flags);          // set the flags
+    // TODO: handle errno
+}
 
 int main() {
   // 1.创建套接字
